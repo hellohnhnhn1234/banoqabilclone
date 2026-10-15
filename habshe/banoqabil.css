@@ -1,0 +1,720 @@
+/* ==============================
+   1. GLOBAL STYLES & RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #222222;
+    background: #ffffff;
+    
+   
+
+}
+
+img {
+    display: block;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ==============================
+   2. NAVIGATION BAR
+================================ */
+
+.navbar {
+    height: 78px;
+    width: 100%;
+    padding: 0 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+    
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    
+}
+
+.brand img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
+
+.brand strong {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111111;
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(12px, 1.8vw, 24px);
+}
+
+nav a {
+    font-size: 15px;
+    color: #1f1f1f;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: color 0.2s ease-in
+}
+
+nav a:hover {
+    color: #237e77;
+}
+
+nav small {
+   
+    margin-left: 3px;
+    padding: 2px 6px;
+    background: #62aba3;
+    color: white;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+nav .register {
+    padding: 10px 22px;
+    border-radius: 8px;
+    background: #237e77;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background 0.2s ease;
+}
+
+nav .register:hover {
+    background: #1c6660;
+    color: white;
+}
+
+
+/* 3. HERO BANNER ki panchait */
+
+.hero {
+    width: 100%;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.hero-banner {
+    width: 100%;
+    height: auto;
+    display: flex;
+   
+}
+
+
+/* 4. IMPACT SECTION (part 2) */
+
+.impact {
+    background-color: #191d1c;
+    background-image: 
+        radial-gradient(circle at 0% 50%, rgba(41, 143, 133, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 100% 50%, rgba(41, 143, 133, 0.12) 0%, transparent 40%);
+    padding: 72px 4% 85px;
+    color: #ffffff;
+    position: relative;
+}
+
+.impact-container {
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+/* Header & Typography */
+.impact-header {
+    text-align: center;
+    margin-bottom: 44px;
+}
+
+.impact-badge {
+    display: inline-block;
+    padding: 6px 18px;
+    background: rgba(41, 143, 133, 0.16);
+    border: 1px solid rgba(41, 143, 133, 0.45);
+    border-radius: 999px;
+    color: #3ad3ba;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    letter-spacing: 0.2px;
+}
+
+.impact-header h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.impact-header h2 .highlight {
+    color: #3ad3ba;
+}
+
+.impact-header p {
+    font-size: 16px;
+    color: #9ea9a5;
+    font-weight: 400;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Stats Cards Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.stat-card {
+    background: #232927;
+    border: 1px solid #2d3532;
+    border-radius: 16px;
+    padding: 28px 20px 24px 22px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 146px;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(58, 211, 186, 0.5);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* uff subtle top-right circle indicator */
+.stat-dot {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #2b3935;
+}
+
+.stat-number {
+    font-size: clamp(28px, 2.6vw, 38px);
+    font-weight: 800;
+    color: #3ad3ba;
+    line-height: 1;
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #c9d2ce;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+
+
+
+/* 6. COMMON SECTION COMPONENTS*/
+
+.section-container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.badge-pill {
+    display: inline-block;
+    padding: 6px 20px;
+    background: rgba(45, 142, 132, 0.12);
+    color: #237e77;
+    border-radius: 999px;
+    font-size: 13.5px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: 0.2px;
+}
+
+.badge-pill-dark {
+    display: inline-block;
+    padding: 6px 20px;
+    background: rgba(45, 142, 132, 0.18);
+    border: 1px solid rgba(45, 142, 132, 0.45);
+    color: #3ad3ba;
+    border-radius: 999px;
+    font-size: 13.5px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    backdrop-filter: blur(4px);
+    letter-spacing: 0.2px;
+}
+
+.section-header h2 {
+    font-size: clamp(28px, 3.2vw, 42px);
+    font-weight: 800;
+    color: #1e2423;
+    line-height: 1.25;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.section-header h2 .highlight {
+    color: #237e77;
+}
+
+.section-header .subtitle {
+    font-size: 16px;
+    color: #5a6663;
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.section-header .subtitle.text-light-muted {
+    color: #9ea9a5;
+}
+
+.heading-line {
+    width: 90px;
+    height: 3.5px;
+    background: #237e77;
+    margin: 20px auto 0;
+    border-radius: 3px;
+}
+
+
+/* ==============================
+   7. WHAT WE OFFER (SERVICES)
+================================ */
+
+.services-section {
+    background: #f5f9f9;
+    padding: 85px 0 95px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 48px;
+}
+
+.service-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid #eef2f2;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.35s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: #237e77;
+    box-shadow: 0 20px 40px #237e7726;
+}
+
+.card-image-box {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    background: #e9eff0;
+}
+
+.card-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.service-card:hover .card-image-box img {
+    transform: scale(1.08);
+}
+
+.card-number-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: rgba(255, 255, 255, 0.95);
+  
+    color: #237e77;
+    font-weight: 800;
+    font-size: 15px;
+    padding: 6px 16px;
+    border-radius: 999px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.service-card .card-body {
+    padding: 26px 24px 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.service-card h3 {
+    font-size: 21px;
+    font-weight: 700;
+    color: #1e2423;
+    margin-bottom: 12px;
+    transition: color 0.2s ease;
+}
+
+.service-card:hover h3 {
+    color: #237e77;
+}
+
+.service-card p {
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: #55605d;
+}
+
+
+/* 8. NEWS & ANNOUNCEMENTS*/
+
+.news-section {
+    background: #ffffff;
+    padding: 90px 0 100px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 52px;
+}
+
+.news-card {
+    background: #f5f9f9;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.1);
+}
+
+.news-image-box {
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+    background: #e3ebe9;
+}
+
+.news-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.news-card:hover .news-image-box img {
+    transform: scale(1.08);
+}
+
+.news-category-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: #237e77;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 5px 16px;
+    border-radius: 999px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.news-body {
+    padding: 24px 22px 28px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.news-date {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13.5px;
+    color: #6d7b77;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+
+
+.news-body h3 {
+    font-size: 19px;
+    font-weight: 700;
+    color: #1e2423;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    transition: color 0.2s ease;
+}
+
+.news-card:hover .news-body h3 {
+    color: #237e77;
+}
+
+.news-body p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #5a6663;
+    flex-grow: 1;
+}
+
+.news-action-wrap {
+    margin-top: 50px;
+}
+
+.btn-primary-teal {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #237e77;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 14px 34px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(35, 126, 119, 0.3);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-primary-teal:hover {
+    background: #1c6660;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(35, 126, 119, 0.4);
+    color: #ffffff;
+}
+
+
+.view-more-btn {
+    padding: 8px 14px;
+    background: #237e77;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(35, 126, 119, 0.2);
+    transition: 0.3s ease;
+}
+
+.view-more-btn:hover {
+    transform: translateY(-3px);
+   
+}
+
+
+
+/* 9. WHAT'S UPCOMING*/
+
+.upcoming-section {
+    background-color: #191d1c;
+    background-image: 
+        radial-gradient(circle at 12% 20%, rgba(41, 143, 133, 0.16) 0%, transparent 42%),
+        radial-gradient(circle at 88% 80%, rgba(41, 143, 133, 0.16) 0%, transparent 42%);
+    padding: 90px 0 100px;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.upcoming-section .section-header h2 {
+    color: #ffffff;
+}
+
+.upcoming-section .section-header h2 .highlight {
+    color: #3ad3ba;
+}
+
+.upcoming-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    margin-top: 52px;
+}
+
+.upcoming-card {
+    background: #232927;
+    border: 1px solid #2d3532;
+    border-radius: 20px;
+    padding: 36px 32px;
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.upcoming-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(58, 211, 186, 0.6);
+    
+}
+
+.upcoming-icon-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    background: rgba(45, 142, 132, 0.2);
+    color: #3ad3ba;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.upcoming-icon-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.upcoming-card:hover .upcoming-icon-box {
+    background: #3ad3ba;
+    color: #111111;
+    transform: scale(1.08) rotate(4deg);
+}
+
+.upcoming-card h3 {
+    font-size: 21px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+    transition: color 0.2s ease;
+}
+
+.upcoming-card:hover h3 {
+    color: #3ad3ba;
+}
+
+.upcoming-card p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: #c9d2ce;
+}
+
+
+/* ==============================
+   10. SUCCESS STORIES SECTION
+================================ */
+
+.stories-section {
+    background: #f5f9f9;
+    padding: 90px 0 100px;
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 52px;
+}
+
+.story-card {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.story-image-box {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #1a1a1a;
+}
+
+.story-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.story-card:hover .story-image-box img {
+    transform: scale(1.06);
+}
+
+.story-body {
+    padding: 24px 22px 28px;
+}
+
+.story-body h3 {
+    font-size: 19px;
+    font-weight: 700;
+    color: #1e2423;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    transition: color 0.2s ease;
+}
+
+.story-card:hover .story-body h3 {
+    color: #237e77;
+}
+
+.story-body p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #5a6663;
+}
+
+
